@@ -1,0 +1,15 @@
+.foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.foto img{
+    width: 70%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    opacity: .5;
+    border-radius: 88px 0px;
+    filter: brightness(1) contrast(2);
+}

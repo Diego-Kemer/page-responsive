@@ -15,6 +15,10 @@ html{
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
+}
+.header{
+    width: 100%;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,31 +31,19 @@ html{
     top: 0;
     z-index: 1;
 }
+
 .head .nav{
-    position: absolute;
-    top: 200px;
-    left: 0px;
+    position: sticky;
+    top: 0px;
     background: rgba(34, 34, 34, 0.377);
-    width: max-content;
+    width: 100%;
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(13px);
-    display: none;
-    animation: entre 1s ease-in-out;
-    z-index: 2;
-}
-@keyframes entre {
-    0%{transform: translateX(-100%);}
-    100%{transform: translateX(0px);}
-}
-.head:hover .nav{
-    display: block;
-}
-.head .nav:hover{
-    display: block;
+    z-index: 3;
 }
 .head .nav nav{
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: space-around;
     background: transparent;
 }
 .head .nav nav a{
@@ -63,6 +55,8 @@ html{
     display: block;
     text-transform: uppercase;
     background: transparent;
+    border: .5px solid #fff;
+    border-radius: 6px;
 }
 .head header{
     position: relative;
@@ -82,8 +76,7 @@ html{
 }
 @keyframes ven {
     0%{transform: translateY(-200%); box-shadow: none; color: #020108;}
-    90%{transform: translateY(20px); box-shadow: none; color: #020108;}
-    
+    90%{transform: translateY(20px); box-shadow: none; color: #020108;}  
 }
 .head header h3{
     font-family: 'Inconsolata', monospace;
@@ -94,10 +87,13 @@ html{
 
 .sobreMi{
     min-height: 60vh;
-    display: grid;
-    grid-template-columns: 40% 60%;
     padding: 50px 20px;
     background: linear-gradient( #0c0052 20%, #020108);
+}
+.animar{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    opacity: 0;
 }
 .sobreMi .foto{
     display: flex;
@@ -110,9 +106,12 @@ html{
     height: 450px;
     object-fit: cover;
     object-position: center;
-    opacity: .5;
     border-radius: 88px 0px;
     filter: brightness(1) contrast(2);
+}
+@keyframes anime {
+    0%{transform: translateY(150px); opacity: 0;}
+    100%{transform: translateY(0px); opacity: .5;}
 }
 .sobreMi .presentacion{
     padding: 20px 100px;
@@ -150,6 +149,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 .vistaPrevia img{
     width: 70%;
@@ -165,24 +165,28 @@ html{
     position: relative;
     background: #657a9f;
 }
+.programacion, .otros{
+    z-index: 2;
+    background: transparent;
+}
 .estudios svg{
     grid-column: 1/3;
     position: absolute;
     bottom: 0;
     z-index: 0;
-    animation: sube 3s ease-in-out;
+    
 }
 @keyframes sube {
-    0%{bottom: -100%;}
+    0%{bottom: -150px;}
     100%{bottom: 0px;}
     
 }
 .estudios .programacion, .estudios .otros{
-    background: #657a9f;
     display: flex;
-    align-items: center;
     padding: 0px 30px;
     justify-content: center;
+    color: #fff;
+    margin-top: 50px;
 }
 .estudios .programacion h2, .estudios .otros h2{
     display: block;
@@ -201,10 +205,12 @@ html{
     width: 100%;
     background: #0c045c;
     padding: 30px 0px;
+    position: relative;
 }
 .footer footer{
     display: grid;
     grid-template-columns: 50% 50%;
+    
 }
 footer .contacto{
     padding: 20px 40px;
@@ -223,4 +229,119 @@ footer .redes{
     text-transform: uppercase;
     margin: 10px 20px;
     color: #fff;
+}
+
+
+@media (max-width: 1275px) {
+    .head header{
+        font-size: 30px;
+    }
+    .sobreMi .foto img{
+        width: 70%;
+        height: 350px;
+    }
+    .sobreMi .presentacion{
+        padding: 20px 50px;
+        font-size: 25px;
+        color: #fff;
+    }
+    .estudios .programacion h2, .estudios .otros h2{
+        font-size: 30px;
+    }
+    .estudios .programacion div ul, .estudios .otros div ul{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1100px){
+    .sobreMi .foto img{
+        height: 300px;
+    }
+    .sobreMi .presentacion{
+        padding: 20px;
+        font-size: 20px;
+    }
+    .vistaPrevia img{
+        width: 70%;
+        height: 300px;
+    }
+}
+@media (max-width: 850px){
+    .vistaPrevia img{
+        height: 250px;
+    }
+    .estudios .programacion{
+        padding-left: 40px;
+    }
+    .estudios .programacion h2{
+        font-size: 25px;
+    }
+}
+@media (max-width: 720px){
+    .head .nav{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: rgba(34, 34, 34, 0.377);
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(13px);
+        -webkit-backdrop-filter: blur(13px);
+        animation: entre 1s ease-in-out;
+        z-index: 8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @keyframes entre {
+        0%{transform: translateX(-100%);}
+        100%{transform: translateX(0px);}
+    }
+    .men{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        text-transform: uppercase;
+        background: #020108;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        z-index: 10;
+    }
+    .head .nav nav{
+        display: grid;
+        grid-template-columns: 1fr;
+        background: transparent;
+    }
+    .head .nav nav a{
+        width: max-content;
+        height: max-content;
+    }
+    .head header{
+        font-size: 20px;
+    }
+    .sobreMi .foto img{
+        width: 70%;
+        height: 250px;
+    }
+    .sobreMi .presentacion{
+        font-size: 16px;
+    }
+    .vistaPrevia img{
+        height: 200px;
+    }
+    .trabajos .work1, .trabajos .work2{
+        font-size: 20px;
+    }
+    .estudios .programacion h2, .estudios .otros h2{
+        font-size: 18px;
+    }
+    .estudios .programacion div ul, .estudios .otros div ul{
+        font-size: 16px;
+    }
+    .footer footer a{
+        font-size: 16px;
+    }
 }
