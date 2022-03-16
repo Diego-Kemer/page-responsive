@@ -1,11 +1,23 @@
+<div class="nav1">
+  <nav>
+    <a href="#sobre"><i class="icofont-man-in-glasses"></i> sobre mì</a>
+    <a href="#work"><i class="icofont-code"></i> trabajos</a>
+    <a href="#study"><i class="icofont-learn"></i> estudios</a>
+    <a href="#contact"><i class="icofont-ui-messaging"></i> contacto</a>
+  </nav>
+</div>
 <div class="head">
-  <button (click)="menuHburguer()" class="men"><span *ngIf="!menu">menú</span><span *ngIf="menu">cerrar</span></button>
+  <button (click)="menuHburguer()" class="men">
+    <span *ngIf="!menu"> <i class="icofont-navigation-menu"></i> menú</span>
+    <span *ngIf="menu"><i class="icofont-ui-close"></i> cerrar</span>
+  </button>
+  
   <div class="nav" *ngIf="menu">
     <nav>
-      <a href="#sobre">sobre mì</a>
-      <a href="#work">trabajos</a>
-      <a href="#study">estudios</a>
-      <a href="#contact">contacto</a>
+      <a href="#sobre"><i class="icofont-man-in-glasses"></i> sobre mì</a>
+      <a href="#work"><i class="icofont-code"></i> trabajos</a>
+      <a href="#study"><i class="icofont-learn"></i> estudios</a>
+      <a href="#contact"><i class="icofont-ui-messaging"></i> contacto</a>
     </nav>
   </div>
   <div class="header">
@@ -24,6 +36,9 @@
       <img src="../assets/I.jpg" alt="">
     </div>
     <div class="presentacion">
+      <figure class="foto1">
+        <img src="../assets/I.jpg" alt="">
+      </figure>
       <p>Actualmente me dedico al desarrollo web de forma independiente, como freelancer, hace un poco más de 2 años. En
         cuanto a los conocimientos que poseo como desarrollador los aprendí en parte por mi cuenta y, en parte,
         realizando
@@ -76,11 +91,14 @@
     <div>
       <h2>Estudios en programación</h2>
       <ul>
-        <li>Curso CSS</li>
-        <li>Curso HTML5</li>
-        <li>Curso Javascript básico</li>
-        <li>Curso Javascript Avanzado</li>
-        <li>Curso desarrollador web Full Stack Jr.</li>
+        <li>Curso desarrollador web Full Stack Jr. (2022)</li>
+        <li>Curso CSS (2019) <i>Modalidad: autodidacta</i></li>
+        <li>Curso HTML5 (2019) <i>Modalidad: autodidacta</i></li>
+        <li>Curso Javascript (2020) <i>Modalidad: autodidacta</i></li>
+        <li>Curso NodeJS (2020) <i>Modalidad: autodidacta</i></li>
+        <li>Curso AngularJS (2021) <i>Modalidad: autodidacta</i></li>
+        <li>Curso Javascript esencial (2022)</li>
+        <li>Curso JavaScript avanzado: Buenas prácticas (2022)</li>
       </ul>
     </div>
   </div>
@@ -89,11 +107,10 @@
     <div>
       <h2>Otros estudios</h2>
       <ul>
-        <li>Operador de pc</li>
-        <li>Administración de empresas</li>
-        <li>Administración contable</li>
-        <li>Secundario completo</li>
-        <li>Profesorado de Lengua y Literatura</li>
+        <li>Operador de pc (2013)</li>
+        <li>Sistema de administración contable (2015)</li>
+        <li>Técnico superior en gestión y administración empresarial (2013-2015)</li>
+        <li>Profesorado de Lengua y Literatura (2017-2021)</li>
       </ul>
     </div>
 
@@ -109,12 +126,20 @@
 <div class="footer" id="contact">
   <footer>
     <div class="contacto">
-      <a href="">Whatsapp</a>
-      <a href="">Gmail</a>
+      <a target="_blank" href="https://wa.me/543435341866">
+        <i class="icofont-brand-whatsapp"></i> Whatsapp
+      </a>
+      <a target="_blank" href="mailto:diegokemer26@gmail.com?subject=Desarrollo web">
+        <i class="icofont-email"></i> Gmail
+      </a>
     </div>
     <div class="redes">
-      <a href="">Instagram</a>
-      <a href="">Facebook</a>
+      <a target="_blank" href="https://www.instagram.com/kemerdiego/">
+        <i class="icofont-instagram"></i> Instagram
+      </a>
+      <a target="_blank" href="https://www.facebook.com/diego.kemer.5/">
+        <i class="icofont-facebook"></i> Facebook
+      </a>
     </div>
   </footer>
 </div>
