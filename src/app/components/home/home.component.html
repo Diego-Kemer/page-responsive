@@ -1,4 +1,26 @@
-<div class="nav1">
+<div class="nav1" #nav>
+  <nav>
+    <div class="logoDesplegables">
+      <a href="#sobre"><b><i class="icofont-world"></i> Lorem</b>.com</a>
+      <a href="#work">Lorem <i class="icofont-thin-down"></i></a>
+      <a href="#study">Lorem <i class="icofont-thin-down"></i></a>
+      <a href="#contact">Lorem <i class="icofont-thin-down"></i></a>
+    </div>
+
+    <div class="acceso">
+      <a href="">Login</a>
+      <a href="">Get in touch</a>
+    </div>
+
+  </nav>
+</div>
+<header class="head">
+  <button (click)="menuHburguer()" class="men">
+    <span *ngIf="!menu"> <i class="icofont-navigation-menu"></i> menú</span>
+    <span *ngIf="menu"><i class="icofont-ui-close"></i> cerrar</span>
+  </button>
+
+  <div class="nav" *ngIf="menu">
     <nav>
       <a href="#sobre"><i class="icofont-man-in-glasses"></i> sobre mì</a>
       <a href="#work"><i class="icofont-code"></i> trabajos</a>
@@ -6,143 +28,267 @@
       <a href="#contact"><i class="icofont-ui-messaging"></i> contacto</a>
     </nav>
   </div>
-  <div class="head">
-    <button (click)="menuHburguer()" class="men">
-      <span *ngIf="!menu"> <i class="icofont-navigation-menu"></i> menú</span>
-      <span *ngIf="menu"><i class="icofont-ui-close"></i> cerrar</span>
-    </button>
-    
-    <div class="nav" *ngIf="menu">
-      <nav>
-        <a href="#sobre"><i class="icofont-man-in-glasses"></i> sobre mì</a>
-        <a href="#work"><i class="icofont-code"></i> trabajos</a>
-        <a href="#study"><i class="icofont-learn"></i> estudios</a>
-        <a href="#contact"><i class="icofont-ui-messaging"></i> contacto</a>
-      </nav>
+  <div class="header">
+    <div class="mayor">
+      <div class="texto">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque illo totam quaerat, fuga error sint quos
+          accusantium a tenetur adipisci, consectetur quam et! Itaque repellendus sunt tempore, sit omnis enim?</p>
+        <div class="botones">
+          <button>Learn more</button>
+          <button>Contact us</button>
+        </div>
+        <p class="textoBajo">Lorem ipsum dolor sit amet.</p>
+      </div>
+      <img src="assets/analisis1.png" alt="">
+      <img class="circulos" src="assets/circulo.png" alt="">
     </div>
-    <div class="header">
-      <header>
-        <h1>diego kemer</h1>
-        <h3>desarrollador web full stack jr</h3>
-      </header>
-    </div>
-  
-    <div class="delante"></div>
-  </div>
-  
-  <div class="sobreMi" id="sobre">
-    <div class="animar">
-      <div class="foto">
-        <img src="../assets/I.jpg" alt="">
-      </div>
-      <div class="presentacion">
-        <figure class="foto1">
-          <img src="../assets/I.jpg" alt="">
-        </figure>
-        <p>Actualmente me dedico al desarrollo web de forma independiente, como freelancer, hace un poco más de 2 años. En
-          cuanto a los conocimientos que poseo como desarrollador los aprendí en parte por mi cuenta y, en parte,
-          realizando
-          cursos; en este sentido he trabajado del lado del Back-end con node.js, utilizando como base de datos MongoDB y
-          del lado del Front AngularJS.
-        </p>
-        <p>Además estoy realizando un curso de desarrollador Full Stack jr. en el que estoy incorporando el uso de base de
-          datos relacionales (My SQL) a mis conocimientos y el lenguaje Java para el desarrollo del Back-end. En cuanto a
-          mi
-          forma de trabajar soy disciplinado, me dedico 100% al trabajo que esté realizando y gestiono el tiempo para
-          aprender lo más rápido posible.
-        </p>
-      </div>
-    </div>
-  
-  </div>
-  
-  <div class="trabajos" id="work">
-    <div class="work1">
-      <div class="lenguajes">
-        <ul id="ok">
-          <li>AngulaJS</li>
-          <li>MongoDB</li>
-          <li>NodeJS</li>
-        </ul>
-  
-      </div>
-      <div class="vistaPrevia">
-        <a target="_blank" href="https://usql.org">
-          <img id="img" src="../../../assets/Sin tídtulo.png" alt="">
-        </a>
-        
-      </div>
-    </div>
-    <div class="work2">
-      <div class="vistaPrevia">
-        <img src="" alt="">
-      </div>
-      <div class="lenguajes">
-        <ul>
-          <li>AngularJS</li>
-          <li>Typescript</li>
-          <li>CSS</li>
-          <li>HTML5</li>
-        </ul>
-  
-      </div>
-    </div>
-  </div>
-  
-  <div class="estudios" id="study">
-    <div class="programacion">
+    <div class="esp">
       <div>
-        <h2>Estudios en programación</h2>
-        <ul>
-          <li>Curso desarrollador web Full Stack Jr. (2022)</li>
-          <li>Curso CSS (2019) <i>Modalidad: autodidacta</i></li>
-          <li>Curso HTML5 (2019) <i>Modalidad: autodidacta</i></li>
-          <li>Curso Javascript (2020) <i>Modalidad: autodidacta</i></li>
-          <li>Curso NodeJS (2020) <i>Modalidad: autodidacta</i></li>
-          <li>Curso AngularJS (2021) <i>Modalidad: autodidacta</i></li>
-          <li>Curso Javascript esencial (2022)</li>
-          <li>Curso JavaScript avanzado: Buenas prácticas (2022)</li>
-        </ul>
+        <img src="assets/Logos/R.png" alt="">
+        <img src="assets/Logos/R (2).png" alt="">
+        <img src="assets/Logos/R (3).png" alt="">
+        <img src="assets/Logos/R (4).png" alt="">
+        <img src="assets/Logos/R (1).png" alt="">
       </div>
     </div>
-  
-    <div class="otros">
+  </div>
+</header>
+
+<div class="sobre" id="sobre">
+  <div class="animar" #presentar>
+    <div class="presentacion">
+      <a href="#">Loremipsum.com</a>
+      <h2>Lorem ipsum dolor sit. Earum exercitationem</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum exercitationem, molestiae quia delectus expedita
+        dolorum aspernatur adipisci laborum debitis distinctio beatae rem odit, veniam quibusdam commodi amet nesciunt
+        voluptatibus sint vel! Saepe quidem ut commodi nisi eaque totam perferendis autem..
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam natus dolorum laboriosam, eveniet illum hic.
+        Asperiores vel facilis quidem repellendus similique magnam hic blanditiis, neque nostrum. Ipsa recusandae
+        facilis sed.
+      </p>
+    </div>
+  </div>
+  <div class="img">
+    <img src="assets/analisis2.png" alt="">
+  </div>
+  <div class="datos" #datos>
+    <div>
+      <h2>Lorem, ipsum dolor.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id corporis reiciendis nulla accusamus aspernatur
+        dignissimos blanditiis delectus sed quam odit?</p>
+    </div>
+    <div>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptate at saepe, alias reiciendis et
+        reprehenderit explicabo ducimus laborum mollitia. </p>
+    </div>
+    <div>
+      <h2>Lorem, ipsum.</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos numquam in dolores repellat sit vero.</p>
+    </div>
+    <div>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio corrupti iure itaque qui maxime autem velit
+        aliquid! veritatis ratione itaque, eos nobis tempora, excepturi autem?</p>
+    </div>
+    <div>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa qui debitis illo alias tempora non commodi.
+        Nihil tempora maxime quos? </p>
+    </div>
+  </div>
+
+</div>
+
+<div class="explore">
+  <div class="contenido">
+    <div class="title">
+      <p>Products</p>
+      <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+    </div>
+    <img class="circulos" src="assets/circulo.png" alt="">
+    <div class="cajas" #cajas>
+      <div #caja>
+        <h3>Lorem ipsum dolor sit.</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis quis rem vitae enim cum!</p>
+        <a href="#">Learn more <i class="icofont-thin-down"></i></a>
+      </div>
+      <div #caja>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quaerat laudantium repellendus nisi cumque dolore
+          quia unde dignissimos error in?</p>
+        <a href="#">Learn more <i class="icofont-thin-down"></i></a>
+      </div>
+      <div #caja>
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eius molestiae accusantium quo enim expedita
+          quasi eos dolorum.</p>
+        <a href="#">Learn more <i class="icofont-thin-down"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="anuncios">
+  <div>
+
+    <img src="assets/Logos/R.png" alt="">
+    <img src="assets/Logos/R (2).png" alt="">
+    <img src="assets/Logos/R (3).png" alt="">
+    <img src="assets/Logos/R (4).png" alt="">
+    <img src="assets/Logos/R (1).png" alt="">
+    <img src="assets/Logos/nik.png" alt="">
+    <img src="assets/Logos/lob.png" alt="">
+    <img src="assets/Logos/moto.png" alt="">
+    <img src="assets/Logos/spid.png" alt="">
+    <img src="assets/Logos/nex.png" alt="">
+
+  </div>
+
+</div>
+
+<div class="customers">
+  <div class="titles">
+    <p>Customers story</p>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <div class="ver">
+      <a href="#">Ver todos los casos </a>
+      <i class="icofont-long-arrow-right"></i>
+    </div>
+  </div>
+
+  <div class="contenido">
+    <div class="primero">
       <div>
-        <h2>Otros estudios</h2>
-        <ul>
-          <li>Operador de pc (2013)</li>
-          <li>Sistema de administración contable (2015)</li>
-          <li>Técnico superior en gestión y administración empresarial (2013-2015)</li>
-          <li>Profesorado de Lengua y Literatura (2017-2021)</li>
-        </ul>
+        <b>Log</b>
+        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores vel magnam molestiae expedita neque
+          cupiditate.</p>
       </div>
-  
-  
+
+      <img src="assets/Logos/custom.jpg" alt="">
     </div>
-    <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#0c045c" fill-opacity="1"
-        d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
-  </div>
-  
-  <div class="footer" id="contact">
-    <footer>
-      <div class="contacto">
-        <a target="_blank" href="https://wa.me/543435341866">
-          <i class="icofont-brand-whatsapp"></i> Whatsapp
-        </a>
-        <a target="_blank" href="mailto:diegokemer26@gmail.com?subject=Desarrollo web">
-          <i class="icofont-email"></i> Gmail
-        </a>
+    <div class="segundo">
+      <div>
+        <b>Logo</b>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quam, eum amet voluptas maxime odio.</p>
       </div>
-      <div class="redes">
-        <a target="_blank" href="https://www.instagram.com/kemerdiego/">
-          <i class="icofont-instagram"></i> Instagram
-        </a>
-        <a target="_blank" href="https://www.facebook.com/diego.kemer.5/">
-          <i class="icofont-facebook"></i> Facebook
-        </a>
+
+      <img src="assets/Logos/custom1.jpg" alt="">
+    </div>
+    <div class="carousel">
+      <img src="assets/Logos/comillas.png" alt="">
+      <b>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui cupiditate rerum atque, facere sequi repellat
+        quas! Quisquam autem perferendis illum reiciendis voluptatem, consequatur deserunt ratione cum inventore,
+        facilis incidunt!"</b>
+      <div class="mas">
+        <b>Lorem ipsum dolor sit amet.</b>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
       </div>
-    </footer>
+      <div class="indicadores">
+        <i class="icofont-long-arrow-left"></i>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <i class="icofont-long-arrow-right"></i>
+      </div>
+    </div>
   </div>
+</div>
+
+  <footer>
+    <div class="contact">
+      <div>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing. </h2>
+        <button>Contact us</button>
+      </div>
+      <div></div>
+    </div>
+    <div class="cuerpo">
+      <div class="marcaIdiomas">
+        <div class="marca">
+          <p><b>Lorem</b>.com</p>
+        </div>
+        <div class="idiomas">
+          <select name="select" id="select">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+          </select>
+        </div>
+      </div>
+      <div class="servicios">
+        <div>
+          <H5>PRODUCTS & NETWORKS</H5>
+          <p>Lorem, ipsum dolor.</p>
+          <p>Lorem</p>
+          <p>Payouts</p>
+          <p>Integration</p>
+          <p>Partners</p>
+          <p>Lorem, ipsum.</p>
+          <p>Fraud protection</p>
+          <p>Pricing</p>
+          <p>Others</p>
+        </div>
+        <div>
+          <H5>SOLUTIONS</H5>
+          <p>eComerce</p>
+          <p>Fintech</p>
+          <p>Gaming</p>
+          <p>Crypto</p>
+        </div>
+        <div>
+          <H5>COMPANY</H5>
+          <p>Our mission</p>
+          <p>Our costumers</p>
+          <p>Newsroom</p>
+          <p>Contact us</p>
+          <p>Open position</p>
+          <p>Diversity & inclusion</p>
+        </div>
+        <div>
+          <H5>DEVELOPERS</H5>
+          <p>Documentation</p>
+          <p>API ref</p>
+          <p>Test acount</p>
+        </div>
+        <div>
+          <H5>RESOURCES</H5>
+          <p>Blog</p>
+          <p>Case studies</p>
+          <p>Support</p>
+        </div>
+      </div>
+      <div class="redesFirma">
+        <a target="_blank" href="https://diego-kemer-cd785.web.app/"><b>@2022 Diego Kemer</b></a>
+        <div class="politicas">
+          <p>Términos y políticas</p>
+          <p>Privacidad</p>
+          <p>Normativa</p>
+          <p>Configuración de cookies</p>
+          <p>Aviso legal</p>
+          <p>Lorem ipsum dolor sit.</p>
+          <p>Código de lorem</p>
+          <p>Declaración de accesibilidad</p>
+        </div>
+        <div class="redes">
+          <div class="diegoK">
+            <p>Diego Kemer es un desarrollador web autónomo. Para conocer más accede a <a target="_blank" href="https://diego-kemer-cd785.web.app/">su porfolio</a>.</p>
+          </div>
+          <div class="socials">
+            <a target="_blank" href="https://www.instagram.com/kemerdiego/"><i class="icofont-instagram"></i></a>
+            <a target="_blank" href="https://www.facebook.com/diego.kemer.5/"><i class="icofont-facebook"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/diego-kemer-desarrollador-web-junior-angular-242002222/"><i class="icofont-linkedin"></i></a>
+            <a target="_blank" href="mailto:diegokemer26@gmail.com?subject=Consulta"><i class="icofont-email"></i></a>
+            <a target="_blank" href="https://github.com/Diego-Kemer"><i class="icofont-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>

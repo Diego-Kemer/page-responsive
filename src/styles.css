@@ -4,6 +4,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --prim: #0d1243;
+    --seg: #26d6d9;
+}
 html{
     scroll-behavior: smooth;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+}
+h2{
+    font-size: 40px;
 }
