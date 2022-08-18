@@ -14,5 +14,10 @@ html{
     font-family: 'Quicksand', sans-serif;
 }
 h2{
-    font-size: 40px;
+    font-size: 2.5rem;
+}
+@media (max-height: 830px) {
+    html{
+        font-size: 12px;
+    }
 }

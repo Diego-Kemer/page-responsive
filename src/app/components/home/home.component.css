@@ -134,13 +134,14 @@ header .esp img{
 }
 .head .texto h1{
     font-weight: 600;
-    font-size: 50px;
+    font-size: 3rem;
     width: 90%;
     line-height: 60px;
 }
 .head .texto p{
     color: rgba(255, 255, 255, 0.747);
     width: 90%;
+    font-size: 16px;
 }
 .head .texto .textoBajo{
     margin-bottom: 10px;
@@ -210,7 +211,7 @@ header .esp img{
 }
 .sobre .presentacion h2{
     color: var(--prim);
-    font-size: 50px;
+    font-size: 3rem;
     margin-bottom: 30px;
     margin-top: 20px;
     width: 70%;
@@ -277,7 +278,21 @@ header .esp img{
     grid-template-columns: 1fr 1fr 1fr;
     margin: auto;
     column-gap: 2%;
+    scroll-snap-type: x mandatory;
+    overflow-x: overlay;
+    overflow-y: hidden;
 }
+   /*Webkit(Chrome, Android browser, Safari, Edge...)*/
+.cajas::-webkit-scrollbar {
+    height: 2px;
+}
+.cajas:hover::-webkit-scrollbar {
+    display: initial;
+}
+.cajas::-webkit-scrollbar-thumb {
+   background-color: var(--seg);
+}
+    /* ------------------------ */
 .explore .contenido .title{
     width: 90%;
     margin: auto;
@@ -301,6 +316,8 @@ header .esp img{
     font-size: 18px;
     position: relative;
     opacity: 0;
+    scroll-snap-align: center;
+    flex: 0 0 50%;
 }
 @keyframes aparece {
     0%{opacity: 0; transform: scale(0.4);}
@@ -308,6 +325,15 @@ header .esp img{
 }
 .explore .contenido .cajas div h3{
     margin-bottom: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.explore .contenido .cajas div p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* número de lineas a truncar */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .explore .contenido .cajas div a{
     text-decoration: none;
@@ -481,7 +507,7 @@ footer .contact{
 }
 footer .contact h2{
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 footer .contact button{
     padding: 15px 25px;
@@ -585,53 +611,36 @@ footer .redesFirma .redes .socials i{
 }
 
 /* -------------------------- */
-@media (max-width: 1275px) {
-    .head header{
-        font-size: 30px;
+/* Altura */
+@media (max-height: 830px) {
+    .customers .contenido{
+        height: 100vh;
     }
-    .sobre .foto img{
-        width: 70%;
-        height: 350px;
+    .head .texto .textoBajo{
+        margin-bottom: 20px;
     }
-    .sobre .presentacion{
-        padding: 20px 50px;
-        font-size: 25px;
-        color: #fff;
+}
+
+@media (max-width: 1600px) {
+    .explore .contenido .title h2{
+        width: 50%;
     }
-    .estudios .programacion h2, .estudios .otros h2{
-        font-size: 30px;
+    .explore .contenido .cajas{
+        display: flex;
     }
-    .estudios .programacion div ul, .estudios .otros div ul{
-        font-size: 20px;
+    .explore .contenido .cajas div{
+        width: 50%;
+        padding: 5% 6% 9% 6%;
     }
 }
 
 @media (max-width: 1100px){
-    .sobre .foto img{
-        height: 300px;
-    }
-    .sobre .presentacion{
-        padding: 20px;
-        font-size: 20px;
-    }
-    .vistaPrevia img{
-        width: 70%;
-        height: 300px;
-    }
-    .nav1 nav a{
-        padding: 5px 10px;
+    .explore .contenido .title h2{
+        width: 100%;
     }
 }
 @media (max-width: 850px){
-    .vistaPrevia img{
-        height: 250px;
-    }
-    .estudios .programacion{
-        padding-left: 40px;
-    }
-    .estudios .programacion h2{
-        font-size: 25px;
-    }
+    
 }
 @media (max-width: 720px){
     .nav1{
@@ -680,89 +689,9 @@ footer .redesFirma .redes .socials i{
         width: max-content;
         height: max-content;
     }
-    .head header{
-        font-size: 20px;
-    }
-    .sobre .animar{
-        grid-template-columns: 100%;
-    }
-    .sobre .foto{
-        display: none;
-    }
-    .sobre .presentacion{
-        font-size: 16px;
-    }
-    .vistaPrevia img{
-        height: 200px;
-    }
-    .presentacion figure.foto1{ 
-        display: block;
-        float: left;
-        shape-outside: circle();
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin: 20px;
-        margin-left: 0px;
-    }
-    .foto1 img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: brightness(1) contrast(2);
-    }
-    .trabajos .work1, .trabajos .work2{
-        font-size: 20px;
-    }
-    .estudios .programacion h2, .estudios .otros h2{
-        font-size: 18px;
-    }
-    .estudios .programacion div ul, .estudios .otros div ul{
-        font-size: 16px;
-    }
-    .footer footer a{
-        font-size: 16px;
-    }
+    
 }
 
 @media (max-width: 600px) {
-    .head header{
-        font-size: 16px;
-        max-width: 90%;
-    }
-    .trabajos .work1, .trabajos .work2{
-        grid-template-columns: 100%;
-    }
-    .trabajos .work1 .lenguajes, .trabajos .work2 .lenguajes{
-        justify-content: start;
-        padding-left: 30px;
-    }
-    .trabajos .work1{
-        grid-template-rows: 50% 50%;
-    }
-    .trabajos .work1 .lenguajes{
-        grid-row: 2/3;
-    }
-    .trabajos .work1 .vistaPrevia{
-        grid-row: 1/2;
-    }
-    .estudios{
-        grid-template-columns: 100%;
-    }
-    .estudios .programacion{
-        padding-left: 30px;
-    }
-    .estudios .programacion, .estudios .otros{
-        justify-content: left;
-    }
-    .footer footer a{
-        margin-left: 0px;
-        margin-right: 0px;
-        font-size: 12px;
-    }
-    footer .contacto, footer .redes{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+    
 }
