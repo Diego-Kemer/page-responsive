@@ -110,18 +110,18 @@
     </div>
     <img class="circulos" src="assets/circulo.png" alt="">
     <div class="cajas" #cajas>
-      <div #caja>
+      <div #caja id="0">
         <h3>Lorem ipsum dolor sit.</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis quis rem vitae enim cum!</p>
         <a href="#">Learn more <i class="icofont-thin-down"></i></a>
       </div>
-      <div #caja>
+      <div #caja id="1">
         <h3>Lorem, ipsum dolor.</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quaerat laudantium repellendus nisi cumque dolore
           quia unde dignissimos error in?</p>
         <a href="#">Learn more <i class="icofont-thin-down"></i></a>
       </div>
-      <div #caja>
+      <div #caja id="2">
         <h3>Lorem ipsum dolor sit amet.</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eius molestiae accusantium quo enim expedita
           quasi eos dolorum.</p>
@@ -179,116 +179,120 @@
 
       <img src="assets/Logos/custom1.jpg" alt="">
     </div>
-    <div class="carousel">
-      <img src="assets/Logos/comillas.png" alt="">
-      <b>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui cupiditate rerum atque, facere sequi repellat
-        quas! Quisquam autem perferendis illum reiciendis voluptatem, consequatur deserunt ratione cum inventore,
-        facilis incidunt!"</b>
-      <div class="mas">
-        <b>Lorem ipsum dolor sit amet.</b>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <div class="contiene">
+      <div class="carousel">
+        <div #caru_item class="caru-item" *ngFor="let item of comentarios.array" id="{{item.id}}">
+          <b>"{{item.comentario}}"</b>
+
+          <img src="assets/Logos/comillas.png" alt="">
+
+          <div class="mas">
+            <b>Lorem ipsum dolor sit amet.</b>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+        </div>
+
       </div>
       <div class="indicadores">
-        <i class="icofont-long-arrow-left"></i>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <i class="icofont-long-arrow-right"></i>
+        <i class="icofont-long-arrow-left" (click)="back()"></i>
+        <ng-container  *ngFor="let item of comentarios.array">
+          <a (click)="cambiar(item.id)" [ngStyle]="{'background':item.id == colorIndicador? '#26d6d9a2': 'rgba(85, 85, 85, 0.616)' }"></a>
+        </ng-container>
+        <i class="icofont-long-arrow-right" (click)="nex()"></i>
       </div>
     </div>
   </div>
 </div>
 
-  <footer>
-    <div class="contact">
+<footer>
+  <div class="contact">
+    <div>
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing. </h2>
+      <button>Contact us</button>
+    </div>
+    <div></div>
+  </div>
+  <div class="cuerpo">
+    <div class="marcaIdiomas">
+      <div class="marca">
+        <p><b>Lorem</b>.com</p>
+      </div>
+      <div class="idiomas">
+        <select name="select" id="select">
+          <option value="English">English</option>
+          <option value="Spanish">Spanish</option>
+        </select>
+      </div>
+    </div>
+    <div class="servicios">
       <div>
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing. </h2>
-        <button>Contact us</button>
+        <H5>PRODUCTS & NETWORKS</H5>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem</p>
+        <p>Payouts</p>
+        <p>Integration</p>
+        <p>Partners</p>
+        <p>Lorem, ipsum.</p>
+        <p>Fraud protection</p>
+        <p>Pricing</p>
+        <p>Others</p>
       </div>
-      <div></div>
+      <div>
+        <H5>SOLUTIONS</H5>
+        <p>eComerce</p>
+        <p>Fintech</p>
+        <p>Gaming</p>
+        <p>Crypto</p>
+      </div>
+      <div>
+        <H5>COMPANY</H5>
+        <p>Our mission</p>
+        <p>Our costumers</p>
+        <p>Newsroom</p>
+        <p>Contact us</p>
+        <p>Open position</p>
+        <p>Diversity & inclusion</p>
+      </div>
+      <div>
+        <H5>DEVELOPERS</H5>
+        <p>Documentation</p>
+        <p>API ref</p>
+        <p>Test acount</p>
+      </div>
+      <div>
+        <H5>RESOURCES</H5>
+        <p>Blog</p>
+        <p>Case studies</p>
+        <p>Support</p>
+      </div>
     </div>
-    <div class="cuerpo">
-      <div class="marcaIdiomas">
-        <div class="marca">
-          <p><b>Lorem</b>.com</p>
-        </div>
-        <div class="idiomas">
-          <select name="select" id="select">
-            <option value="English">English</option>
-            <option value="Spanish">Spanish</option>
-          </select>
-        </div>
+    <div class="redesFirma">
+      <a target="_blank" href="https://diego-kemer-cd785.web.app/"><b>@2022 Diego Kemer</b></a>
+      <div class="politicas">
+        <p>Términos y políticas</p>
+        <p>Privacidad</p>
+        <p>Normativa</p>
+        <p>Configuración de cookies</p>
+        <p>Aviso legal</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Código de lorem</p>
+        <p>Declaración de accesibilidad</p>
       </div>
-      <div class="servicios">
-        <div>
-          <H5>PRODUCTS & NETWORKS</H5>
-          <p>Lorem, ipsum dolor.</p>
-          <p>Lorem</p>
-          <p>Payouts</p>
-          <p>Integration</p>
-          <p>Partners</p>
-          <p>Lorem, ipsum.</p>
-          <p>Fraud protection</p>
-          <p>Pricing</p>
-          <p>Others</p>
+      <div class="redes">
+        <div class="diegoK">
+          <p>Diego Kemer es un desarrollador web autónomo. Para conocer más accede a <a target="_blank"
+              href="https://diego-kemer-cd785.web.app/">su porfolio</a>.</p>
         </div>
-        <div>
-          <H5>SOLUTIONS</H5>
-          <p>eComerce</p>
-          <p>Fintech</p>
-          <p>Gaming</p>
-          <p>Crypto</p>
-        </div>
-        <div>
-          <H5>COMPANY</H5>
-          <p>Our mission</p>
-          <p>Our costumers</p>
-          <p>Newsroom</p>
-          <p>Contact us</p>
-          <p>Open position</p>
-          <p>Diversity & inclusion</p>
-        </div>
-        <div>
-          <H5>DEVELOPERS</H5>
-          <p>Documentation</p>
-          <p>API ref</p>
-          <p>Test acount</p>
-        </div>
-        <div>
-          <H5>RESOURCES</H5>
-          <p>Blog</p>
-          <p>Case studies</p>
-          <p>Support</p>
-        </div>
-      </div>
-      <div class="redesFirma">
-        <a target="_blank" href="https://diego-kemer-cd785.web.app/"><b>@2022 Diego Kemer</b></a>
-        <div class="politicas">
-          <p>Términos y políticas</p>
-          <p>Privacidad</p>
-          <p>Normativa</p>
-          <p>Configuración de cookies</p>
-          <p>Aviso legal</p>
-          <p>Lorem ipsum dolor sit.</p>
-          <p>Código de lorem</p>
-          <p>Declaración de accesibilidad</p>
-        </div>
-        <div class="redes">
-          <div class="diegoK">
-            <p>Diego Kemer es un desarrollador web autónomo. Para conocer más accede a <a target="_blank" href="https://diego-kemer-cd785.web.app/">su porfolio</a>.</p>
-          </div>
-          <div class="socials">
-            <a target="_blank" href="https://www.instagram.com/kemerdiego/"><i class="icofont-instagram"></i></a>
-            <a target="_blank" href="https://www.facebook.com/diego.kemer.5/"><i class="icofont-facebook"></i></a>
-            <a target="_blank" href="https://www.linkedin.com/in/diego-kemer-desarrollador-web-junior-angular-242002222/"><i class="icofont-linkedin"></i></a>
-            <a target="_blank" href="mailto:diegokemer26@gmail.com?subject=Consulta"><i class="icofont-email"></i></a>
-            <a target="_blank" href="https://github.com/Diego-Kemer"><i class="icofont-github"></i></a>
-          </div>
+        <div class="socials">
+          <a target="_blank" href="https://www.instagram.com/kemerdiego/"><i class="icofont-instagram"></i></a>
+          <a target="_blank" href="https://www.facebook.com/diego.kemer.5/"><i class="icofont-facebook"></i></a>
+          <a target="_blank"
+            href="https://www.linkedin.com/in/diego-kemer-desarrollador-web-junior-angular-242002222/"><i
+              class="icofont-linkedin"></i></a>
+          <a target="_blank" href="mailto:diegokemer26@gmail.com?subject=Consulta"><i class="icofont-email"></i></a>
+          <a target="_blank" href="https://github.com/Diego-Kemer"><i class="icofont-github"></i></a>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>

@@ -284,13 +284,14 @@ header .esp img{
 }
    /*Webkit(Chrome, Android browser, Safari, Edge...)*/
 .cajas::-webkit-scrollbar {
-    height: 2px;
+    height: 5px;
 }
 .cajas:hover::-webkit-scrollbar {
     display: initial;
 }
 .cajas::-webkit-scrollbar-thumb {
    background-color: var(--seg);
+   border-radius: 2px;
 }
     /* ------------------------ */
 .explore .contenido .title{
@@ -316,7 +317,7 @@ header .esp img{
     font-size: 18px;
     position: relative;
     opacity: 0;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     flex: 0 0 50%;
 }
 @keyframes aparece {
@@ -401,7 +402,7 @@ header .esp img{
     width: 80%;
     margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 1fr;
     height: 80vh;
     column-gap: 3%;
@@ -450,11 +451,37 @@ header .esp img{
 .customers .contenido div p{
     color: rgba(255, 255, 255, 0.747);
 }
-.customers .contenido .carousel{
+.customers .contenido .contiene{
     padding: 10% 7%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.247);
-    height: 100%;;
+    height: 100%;
     position: relative;
+    
+}
+.customers .contenido .contiene .carousel{
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.customers .contenido .contiene .carousel::-webkit-scrollbar{
+    height: 5px;
+}
+.customers .contenido .contiene .carousel::-webkit-scrollbar-thumb{
+    background: var(--seg);
+    border-radius: 5px;
+}
+.caru-item{
+    width: 100%;
+    scroll-snap-align: none;
+    scroll-padding-right: 20px;
+    scroll-padding-left: 20px;
+    flex: 0 0 100%;
+}
+.elegido{
+    scroll-snap-align: start;
 }
 .customers .contenido .carousel .mas{
     margin-top: 8%;
@@ -467,7 +494,7 @@ header .esp img{
     z-index: 2;
     position: relative;
 }
-.carousel img{
+.contiene img{
     position: absolute;
     width: 25%;
     left: 5%;
@@ -475,20 +502,24 @@ header .esp img{
     z-index: 1;
     opacity: .3;
 }
-.carousel .indicadores{
+.contiene .indicadores{
     display: flex;
     align-items: center;
     margin-top: 8%;
 }
-.carousel .indicadores i{
+.contiene .indicadores i{
     cursor: pointer;
 }
-.carousel .indicadores a{
+.contiene .indicadores a{
     width: 10px;
     height: 10px;
     background: rgba(85, 85, 85, 0.616);
     border-radius: 50%;
     margin: 0px 5px;
+    transition: all .2s linear ease-in-out;
+}
+.contiene .indicadores a:active{
+    background: red;
 }
 
 

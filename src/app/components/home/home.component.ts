@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewChildren } from '@angular/core';
-
+import * as data from '../../comentarios.json';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -11,15 +11,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('datos') datos!: ElementRef;
   @ViewChild('cajas') cajas!: ElementRef;
   @ViewChildren('caja') caja!: Array<ElementRef>;
+  @ViewChildren('caru_item') caruItem!: Array<ElementRef>;
   public menu: boolean = false;
   private observar: any;
-  
+  public comentarios = data;
+  public colorIndicador: string = '0';
+  constructor(){}
 
   ngOnInit(): void {
     
   }
 
   ngAfterViewInit(): void {
+    console.log(data)
     /* Nav aparece y desaparece según scroll */
     let ubicacionPrincipal = window.pageYOffset;
     let nav = this.nav
@@ -66,9 +70,41 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.observar.observe(this.presentar.nativeElement)
     this.observar.observe(this.datos.nativeElement)
     this.observar.observe(this.cajas.nativeElement)
+
+    
   }
 
-  
+  cambiar(num: string){
+    this.colorIndicador = num;
+    this.caruItem.forEach(element=>{
+      if(element.nativeElement.classList[1] == 'elegido'){
+        element.nativeElement.classList.remove('elegido')
+      }
+      if(element.nativeElement.id == num){
+        element.nativeElement.classList.add('elegido')
+      }
+    })
+  }
+
+  nex(){
+    const select = parseInt(this.colorIndicador) + 1;
+    this.movimiento(select)
+  }
+  back(){
+    const select = parseInt(this.colorIndicador) - 1;
+    this.movimiento(select)
+  }
+  movimiento(select: number){
+    this.caruItem.forEach(element=>{
+      if(element.nativeElement.classList[1] == 'elegido'){
+        element.nativeElement.classList.remove('elegido')
+      }
+      if(element.nativeElement.id == select.toString()){
+        element.nativeElement.classList.add('elegido')
+        this.colorIndicador = select.toString()
+      }
+    })
+  }
   
 
   menuHburguer(){
