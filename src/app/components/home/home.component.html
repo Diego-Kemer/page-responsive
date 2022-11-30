@@ -2,9 +2,21 @@
   <nav>
     <div class="logoDesplegables">
       <a href="#sobre"><b><i class="icofont-world"></i> Lorem</b>.com</a>
-      <a href="#work">Lorem <i class="icofont-thin-down"></i></a>
-      <a href="#study">Lorem <i class="icofont-thin-down"></i></a>
-      <a href="#contact">Lorem <i class="icofont-thin-down"></i></a>
+      <a  class="option" href="#work">Lorem <i class="icofont-thin-down"></i></a>
+      <a class="option" href="#study">Lorem <i class="icofont-thin-down"></i></a>
+      <a class="option" href="#contact">Lorem <i class="icofont-thin-down"></i></a>
+      <button (click)="menuHburguer()" class="men">
+        <span *ngIf="!menu"> <i class="icofont-navigation-menu"></i></span>
+        <span *ngIf="menu"><i class="icofont-ui-close"></i></span>
+      </button>
+    
+      <div class="nav" *ngIf="menu">
+        <nav>
+          <a href="#work">Lorem <i class="icofont-thin-down"></i></a>
+          <a href="#study">Lorem <i class="icofont-thin-down"></i></a>
+          <a href="#contact">Lorem <i class="icofont-thin-down"></i></a>
+        </nav>
+      </div>
     </div>
 
     <div class="acceso">
@@ -15,19 +27,7 @@
   </nav>
 </div>
 <header class="head">
-  <button (click)="menuHburguer()" class="men">
-    <span *ngIf="!menu"> <i class="icofont-navigation-menu"></i> menú</span>
-    <span *ngIf="menu"><i class="icofont-ui-close"></i> cerrar</span>
-  </button>
-
-  <div class="nav" *ngIf="menu">
-    <nav>
-      <a href="#sobre"><i class="icofont-man-in-glasses"></i> sobre mì</a>
-      <a href="#work"><i class="icofont-code"></i> trabajos</a>
-      <a href="#study"><i class="icofont-learn"></i> estudios</a>
-      <a href="#contact"><i class="icofont-ui-messaging"></i> contacto</a>
-    </nav>
-  </div>
+  
   <div class="header">
     <div class="mayor">
       <div class="texto">
@@ -134,16 +134,16 @@
 <div class="anuncios">
   <div>
 
-    <img src="assets/Logos/R.png" alt="">
-    <img src="assets/Logos/R (2).png" alt="">
-    <img src="assets/Logos/R (3).png" alt="">
-    <img src="assets/Logos/R (4).png" alt="">
-    <img src="assets/Logos/R (1).png" alt="">
-    <img src="assets/Logos/nik.png" alt="">
-    <img src="assets/Logos/lob.png" alt="">
-    <img src="assets/Logos/moto.png" alt="">
-    <img src="assets/Logos/spid.png" alt="">
-    <img src="assets/Logos/nex.png" alt="">
+    <img src="https://www.bing.com/images/blob?bcid=TijvLr-PUvMEog" alt="">
+    <img src="https://www.bing.com/images/blob?bcid=Tp3zudeQvfMEOQ" alt="">
+    <img src="https://www.bing.com/images/blob?bcid=Tpb0mGAzTfMEUwg" alt="">
+    <img src="https://www.bing.com/images/blob?bcid=TkDi0cbH1vMEjQ" alt="">
+    <img src="https://www.bing.com/images/blob?bcid=Tr0ZQsbCJfME2A" alt="">
+    <img src="https://www.bing.com/images/blob?bcid=Tp5Z51flBPME4g" alt="">
+    <img src="https://www.bing.com/images/blob?bcid=TsjpKN8PqvMEJA" alt="">
+    <img src="https://www.bing.com/images/blob?bcid=TvlNqXobvvMEig" alt="">
+    <img src="https://www.bing.com/images/blob?bcid=Tk35C7OrVPMEUg" alt="">
+    <img src="https://www.bing.com/images/blob?bcid=TlYg4lxGEPMEhQ" alt="">
 
   </div>
 
@@ -168,7 +168,7 @@
           cupiditate.</p>
       </div>
 
-      <img src="assets/Logos/custom.jpg" alt="">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
     </div>
     <div class="segundo">
       <div>
@@ -177,7 +177,7 @@
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quam, eum amet voluptas maxime odio.</p>
       </div>
 
-      <img src="assets/Logos/custom1.jpg" alt="">
+      <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
     </div>
     <div class="contiene">
       <div class="carousel">
@@ -267,7 +267,7 @@
       </div>
     </div>
     <div class="redesFirma">
-      <a target="_blank" href="https://diego-kemer-cd785.web.app/"><b>@2022 Diego Kemer</b></a>
+      <a target="_blank" href="https://diego-kemer-cd785.web.app/"><b>@2022 ADser Informatic</b></a>
       <div class="politicas">
         <p>Términos y políticas</p>
         <p>Privacidad</p>
@@ -280,7 +280,7 @@
       </div>
       <div class="redes">
         <div class="diegoK">
-          <p>Diego Kemer es un desarrollador web autónomo. Para conocer más accede a <a target="_blank"
+          <p>ADser Informatic es un equipo de desarrollo web. Para conocer más accede a <a target="_blank"
               href="https://diego-kemer-cd785.web.app/">su porfolio</a>.</p>
         </div>
         <div class="socials">
